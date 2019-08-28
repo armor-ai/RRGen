@@ -1,0 +1,8 @@
+result/*
+preprocess/*
+.idea/*
+paper/*
+materials/*
+*/.DS_Store
+__pycache__/*
+*/.pyc
