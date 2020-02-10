@@ -10,30 +10,10 @@ from torch.autograd import Variable
 
 
 args = Namespace(
-# glove_filename='D:\Github\Reply_reviews\glove.6B\glove.6B.50d.txt',
-#     test_filename='D:\Github\Reply_reviews\data\single_test_data.txt',
-#     train_filename='D:\Github\Reply_reviews\data\single_test_data.txt',
-#     valid_filename='D:\Github\Reply_reviews\data\single_test_data.txt'
-
-    # glove_filename='/research/lyu1/jczeng/cygao/glove.6B.100d.txt',
-    # test_filename='/research/lyu1/jczeng/cygao/test_label.txt',
-    # train_filename='/research/lyu1/jczeng/cygao/train_label.txt',
-    # valid_filename='/research/lyu1/jczeng/cygao/valid_label.txt',
-    # glove_filename='/research/lyu1/cygao/workspace/data/glove.6B.100d.txt',
-    # test_filename='/research/lyu1/cygao/workspace/data/test_label.txt',
-    # train_filename='/research/lyu1/cygao/workspace/data/train_label.txt',
-    # valid_filename='/research/lyu1/cygao/workspace/data/valid_label.txt',
     glove_filename='/home/cuiyun1/tasks/review_reply/data/glove.6B.100d.txt',
     test_filename='/home/cuiyun1/tasks/review_reply/data/test_label_n.txt',
     train_filename='/home/cuiyun1/tasks/review_reply/data/train_label_n.txt',
     valid_filename='/home/cuiyun1/tasks/review_reply/data/valid_label_n.txt',
-    # test_filename='/research/lyu1/cygao/workspace/data/single_test_senti.txt',
-    # train_filename='/research/lyu1/cygao/workspace/data/single_train_senti.txt',
-    # valid_filename='/research/lyu1/cygao/workspace/data/single_valid_senti.txt',
-    # cate_filename='/research/lyu1/jczeng/cygao/app_category.txt',
-    # keyword_filename='/research/lyu1/jczeng/cygao/keyword_dict.json',
-    # cate_filename='/research/lyu1/cygao/workspace/data/app_category.txt',
-    # keyword_filename='/research/lyu1/cygao/workspace/data/keyword_dict.json',
     cate_filename='/home/cuiyun1/tasks/review_reply/data/app_category.txt',
     keyword_filename='/home/cuiyun1/tasks/review_reply/data/keyword_dict.json',
     feature_vec_size = 20
