@@ -1,5 +1,5 @@
 # Automating App Review Response Generation
-Dataset and replication package for the Automating App Review Response Generation (submitting to ASE 2019).
+Dataset and replication package for the paper Automating App Review Response Generation (ASE 2019).
 
 ## Usage
 Run the code with
