@@ -85,13 +85,16 @@ def translate(src_text, rate_sents, cate_sents, senti_sents, train_dataset, enco
         if token_id == EOS:
             break
         else:
+            token = ''
             if token_id == UNK and replace_unk:
                 # Replace unk by selecting the source token with the highest attention score.
                 score, idx = all_attention_weights[t].max(0)
                 try:
-                    token = src_sent[idx[0]]
+                    # get value of scalar and minus 1 for zero-based indexing
+                    token = src_sent[idx.item()-1]
+                    # token = src_sent[idx[0]]
                 except IndexError:
-                    print(idx)
+                    print('[!] Could not retrieve idx {} from {}'.format(idx.item()-1, str(src_sent)))
             else:
                 # <UNK>
                 try:
@@ -99,8 +102,8 @@ def translate(src_text, rate_sents, cate_sents, senti_sents, train_dataset, enco
                 except KeyError:
                     print('token_id is ', token_id)
 
-
-            out_sent.append(token)
+            if token:
+                out_sent.append(token)
 
         # Next input is chosen word
         input_seq = Variable(torch.LongTensor([token_id]), volatile=True)
